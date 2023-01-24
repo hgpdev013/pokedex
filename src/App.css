@@ -35,7 +35,15 @@ body{
 .pokemonPhoto{
     background-color: rgb(27, 27, 27);
     border: solid white;
-    width: 200px;
+    width: 206px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.loadingGif{
+    background-color: rgb(27, 27, 27);
+    border: solid white;
+    width: 206px;
     border-radius: 10px;
     margin-bottom: 20px;
 }

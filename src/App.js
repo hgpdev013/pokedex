@@ -11,11 +11,16 @@ const App = () => {
   
   const handleChange = (event) => {
     setInputId(Number(event.target.value));
+    if (inputId >= 1008){
+      setInputId(1008);
+    } else if (inputId < 1){
+      setInputId(1);
+    }
   }
 
 
   function increment(){
-    if (inputId != 1279){
+    if (inputId < 1008){
       setInputId(state => state + 1);
       document.getElementById("lightEffect").classList.add("active")
       setTimeout(()=> {

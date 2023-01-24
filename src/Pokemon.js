@@ -6,7 +6,7 @@ export const Pokemon = ({dados, carregando}) => {
   return (
     <div className='pokemonFrame'>
         <p className='pokemonName'>{dados.name}</p>
-        {carregando ? <img src={loading} /> : <img src={dados.sprites.front_default} alt="" className='pokemonPhoto'/>}
+        {!dados.sprites.front_default ? <img src={loading} className="loadingGif"/> : <img src={dados.sprites.front_default} alt="" className='pokemonPhoto'/>}
     </div>
   )
 }
