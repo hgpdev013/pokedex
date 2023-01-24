@@ -6,8 +6,10 @@ const App = () => {
 
 
   const [carregando, setCarregando] = React.useState(true);
-  const [dados, setDados] = React.useState()
+  const [dados, setDados] = React.useState();
   const [inputId, setInputId] = React.useState(1)
+  const [image, setImage] = React.useState();
+
   
   const handleChange = (event) => {
     setInputId(Number(event.target.value));
@@ -46,8 +48,10 @@ const App = () => {
     setCarregando(true)
   }
 
+
   React.useEffect(() => {
     puxaDados();
+    setImage(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${inputId}.png`);
   },[inputId])
 
 
@@ -56,7 +60,7 @@ const App = () => {
       <div className='allFrame'>
         <div className='dex'>
           <div className='lightEffect' id='lightEffect'/>
-          {dados && <Pokemon dados={dados}/>}
+          {dados && <Pokemon image ={image} dados={dados}/>}
           <div className='inputBox'>
             <div className='headerBox'>
               <button className='leftBotao' onClick={decrement}/>
