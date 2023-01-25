@@ -74,7 +74,7 @@ input{
     margin: 10px 55px;
     background-color: rgb(150, 209, 62);
     border-radius: 10px;
-    text-decoration: none;
+    font-weight: bold;
 }
 
 .lightEffect{
